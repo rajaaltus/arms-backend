@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "saved_reports",
+  "info": {
+    "name": "saved_reports"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "annual_year": {
+      "type": "integer"
+    },
+    "userType": {
+      "type": "enumeration",
+      "enum": [
+        "FACULTY",
+        "STUDENT",
+        "DEPARTMENT"
+      ]
+    },
+    "department": {
+      "model": "department"
+    },
+    "section_a": {
+      "type": "richtext"
+    },
+    "section_b": {
+      "type": "richtext"
+    },
+    "section_c": {
+      "type": "richtext"
+    },
+    "section_d": {
+      "type": "richtext"
+    },
+    "section_e": {
+      "type": "richtext"
+    },
+    "section_f": {
+      "type": "richtext"
+    }
+  }
+}
