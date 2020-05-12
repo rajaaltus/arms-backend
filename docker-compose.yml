@@ -8,6 +8,7 @@ services:
     restart: unless-stopped
     container_name: arms_strapi
     environment:
+      NODE_ENV: production
       APP_NAME: strapi-app
       DATABASE_CLIENT: mysql
       DATABASE_HOST: db
@@ -20,6 +21,7 @@ services:
       - 1337:80
     volumes:
       - ./app:/srv/app
+    command: 'strapi start'
 
   db:
     container_name: str_mysql
