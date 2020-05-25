@@ -6,20 +6,22 @@ services:
       - db
     image: strapi/strapi
     restart: unless-stopped
-    container_name: arms_strapi
+    container_name: arms_backend
     environment:
+      NODE_ENV: production
       APP_NAME: strapi-app
       DATABASE_CLIENT: mysql
       DATABASE_HOST: db
       DATABASE_PORT: 3306
       DATABASE_NAME: strapi-dev
       DATABASE_USERNAME: root
-      DATABASE_PASSWORD: strapi
+      DATABASE_PASSWORD: Arms@v2y2020
       DATABASE_SSL: "false"
     ports: 
-      - 1337:80
+      - 1338:80
     volumes:
       - ./app:/srv/app
+    command: 'strapi start'
 
   db:
     container_name: str_mysql
@@ -29,8 +31,8 @@ services:
     environment:
       MYSQL_DATABASE: strapi-dev
       MYSQL_USER: root
-      MYSQL_PASSWORD: strapi
-      MYSQL_ROOT_PASSWORD: strapi
+      MYSQL_PASSWORD: Arms@v2y2020
+      MYSQL_ROOT_PASSWORD: Arms@v2y2020
     volumes:
       - ./db:/var/lib/mysql
     ports:
@@ -44,4 +46,4 @@ services:
       - '19090:80'
     environment:
       PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: strapi
+      MYSQL_ROOT_PASSWORD: Arms@v2y2020
