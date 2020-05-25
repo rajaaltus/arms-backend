@@ -14,11 +14,11 @@ services:
       DATABASE_HOST: db
       DATABASE_PORT: 3306
       DATABASE_NAME: strapi-dev
-      DATABASE_USERNAME: root
-      DATABASE_PASSWORD: Arms@v2y2020
+      DATABASE_USERNAME: strapi
+      DATABASE_PASSWORD: strapi
       DATABASE_SSL: "false"
     ports: 
-      - 1338:80
+      - 1338:1338
     volumes:
       - ./app:/srv/app
     command: 'strapi start'
@@ -30,13 +30,13 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: strapi-dev
-      MYSQL_USER: root
-      MYSQL_PASSWORD: Arms@v2y2020
+      MYSQL_USER: strapi
+      MYSQL_PASSWORD: strapi
       MYSQL_ROOT_PASSWORD: Arms@v2y2020
     volumes:
       - ./db:/var/lib/mysql
     ports:
-      - '3306:3306'
+      - '3307:3306'
   phpmyadmin:
     depends_on:
       - db
