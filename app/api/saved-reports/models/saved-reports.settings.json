@@ -40,6 +40,15 @@
     },
     "section_f": {
       "type": "richtext"
+    },
+    "Month": {
+      "type": "integer"
+    },
+    "from": {
+      "type": "date"
+    },
+    "to": {
+      "type": "date"
     }
   }
 }
