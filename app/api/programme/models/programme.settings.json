@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "connection": "default",
   "collectionName": "programmes",
   "info": {
@@ -93,6 +94,9 @@
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "outside_location": {
+      "type": "string"
     }
   }
 }

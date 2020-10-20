@@ -23,22 +23,22 @@
     "department": {
       "model": "department"
     },
-    "section_a": {
+    "program": {
       "type": "richtext"
     },
-    "section_b": {
+    "visitor": {
       "type": "richtext"
     },
-    "section_c": {
+    "training": {
       "type": "richtext"
     },
-    "section_d": {
+    "presentation": {
       "type": "richtext"
     },
-    "section_e": {
+    "participation": {
       "type": "richtext"
     },
-    "section_f": {
+    "publicEngagement": {
       "type": "richtext"
     },
     "Month": {
@@ -49,6 +49,21 @@
     },
     "to": {
       "type": "date"
+    },
+    "research": {
+      "type": "richtext"
+    },
+    "publication": {
+      "type": "richtext"
+    },
+    "recognition": {
+      "type": "richtext"
+    },
+    "patent": {
+      "type": "richtext"
+    },
+    "assignment": {
+      "type": "richtext"
     }
   }
 }
